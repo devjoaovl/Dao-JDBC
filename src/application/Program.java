@@ -32,9 +32,15 @@ public class Program {
 		}
 		
 		System.out.println("=== TESTE 4 : Seller INSERT ====");
-		Seller newSeller = new Seller(null,"Tuchito", "tuchit@hotmail.com", new Date(), 3500.0, department);
-		sellerDao.insert(newSeller);
-		System.out.println("Inserted! New id = " + newSeller.getId());
+		//Seller newSeller = new Seller(null,"Tuchito", "tuchit@hotmail.com", new Date(), 3500.0, department);
+		//sellerDao.insert(newSeller);
+		//System.out.println("Inserted! New id = " + newSeller.getId());
+		
+		System.out.println("=== TESTE 5 : Seller UPDATE ====");
+		seller = sellerDao.findById(1);
+		seller.setName("Martha Waine");
+		sellerDao.update(seller);
+		System.out.println("UPDATE COMPLETED");
 	}
 
 }
